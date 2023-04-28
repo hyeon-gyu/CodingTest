@@ -1,4 +1,5 @@
-arr = [[int(x) for x in input().split()] for y in range(9)]
+arr = []
+arr.apend(list(map(int,input().split())))
 max = 0
 a= 0
 b = 0
