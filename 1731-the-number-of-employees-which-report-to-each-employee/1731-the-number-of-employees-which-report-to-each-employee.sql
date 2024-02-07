@@ -1,0 +1,8 @@
+# Write your MySQL query statement below
+select e1.employee_id, e1.name, count(e1.name) as reports_count, round(avg(e2.age)) as average_age 
+from employees e1, employees e2
+where e1.employee_id = e2.reports_to 
+group by e1.employee_id
+order by e1.employee_id;
+
+# 레코드 모두 reports_to가 null인 경우를 대처해야한다.
