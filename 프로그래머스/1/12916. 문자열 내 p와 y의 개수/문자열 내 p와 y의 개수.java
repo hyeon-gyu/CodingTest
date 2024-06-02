@@ -3,13 +3,14 @@ class Solution {
         boolean answer = true;
         int cnt1 = 0;
         int cnt2 = 0;
-        
+        s = s.toLowerCase();
         char[] array = s.toCharArray();
+        
         for(int i = 0; i < array.length; i++){
-            if ((array[i] == 'p') || (array[i] == 'P')){
+            if (array[i] == 'p'){
                 cnt1 += 1;
             }
-            else if((array[i] == 'y') ||( array[i] == 'Y')){
+            else if(array[i] == 'y'){
                 cnt2 += 1;
             }
         }
