@@ -1,18 +1,17 @@
+import java.util.*;
 class Solution {
     public boolean solution(int x) {
-        boolean answer = true;
-        int tmp = x;
-        int sum = 0;
-        while(x >= 10){
-            int mod = x % 10;
-            sum += mod;
-            x = x / 10;
+        String [] tmp = String.valueOf(x).split("");
+        System.out.println(Arrays.toString(tmp));
+        int sum=0;
+        for(String s : tmp) {
+            sum+=Integer.parseInt(s);
         }
-        sum += x;
-        System.out.println(sum);
-        if(tmp % sum != 0){
-            answer = false;
+
+        if(x%sum==0) {
+            return true;
+        } else {
+            return false;
         }
-        return answer;
     }
 }
