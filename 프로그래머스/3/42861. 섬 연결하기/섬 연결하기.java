@@ -29,7 +29,7 @@ class Solution {
             answer += cost;
             if(set.size() == n) break;
             for(int i = 0; i < graph[node].length; i++) {
-                if(graph[node][i] == 0) continue;
+                if(graph[node][i] == 0 || visited[i]) continue;
                 pq.offer(new int[] {graph[node][i], i});
             }
         }
